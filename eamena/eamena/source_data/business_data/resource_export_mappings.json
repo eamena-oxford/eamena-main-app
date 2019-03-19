@@ -293,7 +293,7 @@
                 }
                 ]
             },                      
-            "HERITAGE_RESOURCE_GROUP.E27": {
+            "HERITAGE_PLACE.E27": {
                 "FIELD_MAP": [
                 {
                 "field_name": "NAME.E41",
@@ -679,7 +679,7 @@
             {"field_name": "Assessor","source": "field_map", "data_type":"str", "data_length":"128"}
         ],
         "RESOURCE_TYPES": {
-            "HERITAGE_RESOURCE_GROUP.E27": {
+            "HERITAGE_PLACE.E27": {
                 "FIELD_MAP": [
                 {
                 "field_name": "HerType",
