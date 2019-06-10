@@ -185,7 +185,7 @@ ADDITIONAL_RESOURCE_GRAPH_LOCATIONS = (
 )
 
 SKOS_FILE_LOCATION = os.path.join(PACKAGE_ROOT,"source_data","concepts",
-    "EAMENA-main-app-RDM-Feb15.xml")
+    "EAMENA-main-app-RDM-June10.xml")
 
 CONCEPT_SCHEME_LOCATIONS = (
     # Put strings here, like "/home/data/authority_files" or "C:/data/authority_files".
