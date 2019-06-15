@@ -154,6 +154,15 @@ def RESOURCE_TYPE_CONFIGS():
     }
 
 
+# Map settings
+DEFAULT_MAP_X = 3000000
+DEFAULT_MAP_Y = 2200000
+DEFAULT_MAP_ZOOM = 4
+MAP_MAX_ZOOM = 19
+MAP_MAX_UNLOGGED_ZOOM = 10 # This is the max level of zoom for anonymous users
+REPORT_MIN_UNLOGGED_ZOOM = 16
+ENCODING_KEY = None
+
 #The list of resource types which should have their geometries indexed into the maplayers index for restriction by geo area.
 MAPLAYERS_INDEX_RESOURCE_TYPES = [
     "HERITAGE_RESOURCE_GROUP.E27",
@@ -176,7 +185,7 @@ ADDITIONAL_RESOURCE_GRAPH_LOCATIONS = (
 )
 
 SKOS_FILE_LOCATION = os.path.join(PACKAGE_ROOT,"source_data","concepts",
-    "EAMENA-main-app-RDM-Feb15.xml")
+    "EAMENA-main-app-RDM-June11.xml")
 
 CONCEPT_SCHEME_LOCATIONS = (
     # Put strings here, like "/home/data/authority_files" or "C:/data/authority_files".

@@ -87,8 +87,20 @@ define(['jquery',
                     dataKey: 'FUNCTION_INTERPRETATION_INFERENCE_MAKING.I5',
                     rules: true,
                     validateBranch: function (nodes) {
-                        var canBeEmpty = ['FUNCTION_INTERPRETATION_INFERENCE_MAKING_ACTOR_NAME.E41'];
-                        return this.validateHasValues(nodes,canBeEmpty);
+                        var canBeEmpty = [
+                            'FUNCTION_INTERPRETATION_INFERENCE_MAKING_ACTOR_NAME.E41',
+                        ];
+                        var ck0 = this.validateHasValues(nodes,canBeEmpty);
+                        return ck0;
+                    }
+                }));
+                this.addBranchList(new BranchList({
+                    el: this.$el.find('#site-function')[0],
+                    data: this.data,
+                    dataKey: 'SITE_FUNCTION_TYPE.I4',
+                    rules: true,
+                    validateBranch: function (nodes) {
+                        return this.validateHasValues(nodes);
                     }
                 }));
             },
