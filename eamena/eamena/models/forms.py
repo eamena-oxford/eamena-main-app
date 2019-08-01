@@ -1731,7 +1731,7 @@ class PublicationForm(ResourceForm):
             
             self.data['TITLE.E41'] = {
                 'branch_lists': self.get_nodes('TITLE.E41'),
-                'domains': {'TITLE_TYPE.E55' : Concept().get_e55_domain('TITLE_TYPE.E55')
+                'domains': {
                  }
             }
             
