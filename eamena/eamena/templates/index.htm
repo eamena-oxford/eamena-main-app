@@ -33,9 +33,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
    <h3>{% trans 'Welcome to the Endangered Archaeology in the Middle East & North Africa (EAMENA) Database' %}</h3>
     <p>{% trans 'Supported by ' %}<a href="https://www.arcadiafund.org.uk/">{% trans 'Arcadia Fund' %}</a> {% trans 'and based at the Universities of ' %}<a href="http://www.ox.ac.uk/">{% trans 'Oxford' %}</a>, <a href ="https://le.ac.uk/">{% trans 'Leicester' %}</a> {% trans 'and' %} <a href ="https://www.dur.ac.uk/">Durham</a>, {% trans 'the EAMENA Database brings together data from satellite imagery and published reports to make available information about archaeological sites and landscapes which are under threat. Using Arches, an open source platform designed by the Getty Conservation Institute and World Monuments Fund, we have been able to build a resource that can be used online by researchers and heritage professionals across the MENA region, Europe and beyond.' %}</p>
     <h5>{% trans 'How to use the Database' %}</h5>
-    <p>{% trans 'The archaeology of this region can be explored via the public Database, which is available in both English and Arabic. Users can see the progress of the project so far by clicking on the Map View. This will display all the records that we have created, and it is continually updated. As the Database contains over 200,000 records, please be patient while these resources are loaded. Different types of records are coloured differently. So, for example, all our site records are in yellow. The key to the different colours is located in the Overlays tab. If you click on this, you can also select whether you want to see the site records (called Heritage Resource E27 records) displayed on the map, or all of the site records and information records (called Information Resources). Information Resources are the records of the imagery, articles, etc that we have consulted about each site. Using the Map View it is also possible to zoom in to see more details about each area. Try toggling to a full-screen view by clicking on the arrows in the top right hand corner of the map screen. To see a list of records created by the project, you can also select the Search option in the top right hand tab.' %}</p>
+    <p>{% trans 'The archaeology of this region can be explored via the public database, which is available in both English and Arabic. Users can see the progress of the project so far by clicking on the Map View. This will display all the records that we have created, and it is continually updated. As the Database contains over 200,000 records, please be patient while these resources are loaded. Different types of records are coloured differently. For example, all site records are in yellow. The key to the different colours is located in the Overlays tab. If you click on this, you can also select whether you want to see the site records (called Heritage Resources) displayed on the map, or all of the site records and information records (called Information Resources). Information Resources include imagery and published references associated with archaeological heritage. Using the Map View it is possible to zoom in to see more details about each area. You can toggle to a full-screen view by clicking on the arrows in the top right-hand corner of the map screen. To see the a list of records created by the project, you can select the Search option in the top right hand tab.' %}</p>
     <div class = "disclaimer-button">
-        <button type="button" class="btn btn-default" data-dismiss="modal">{% trans 'Continue as a Visitor' %}</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">{% trans 'Login or Continue As a Visitor' %}</button>
         <a href="http://eamena.arch.ox.ac.uk/database-registration-form/"><button type="button" class="btn btn-default" >{% trans 'Register for Full Access' %}</button></a>
     </div>
   </div>
@@ -51,7 +51,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             <div class="ls-layer">
                 
                 <!-- Background -->
-                <img src="{% static 'img/BahlaFort_Oman_2015_JB.jpg' %}" class="ls-s3" style="max-width: 2000px !important; top: -50px; left: -550px; durationin: 0;" alt="Slide background">
+                <img src="{% static 'img/BahlaFort_Oman_2015_JB_cropped.jpg' %}" class="ls-s3" style="max-width: 2000px !important; top: -50px; left: -550px; durationin: 0;" alt="Slide background">
                     
                     <!-- Text -->
                     <span class="ls-s-s1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:50px; left: -70px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
@@ -71,7 +71,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             <div class="ls-layer" style="">
                 
                 <!-- Background -->
-                <img src="{% static 'img/Libya_Sabratha_Temple_of_Isis.jpg' %}" class="ls-s3" style="max-width: 2000px !important; top: -50px; left: -550px; durationin: 0;" alt="Slide background">
+                <img src="{% static 'img/Libya_Sabratha_Temple_of_Isis_small.jpg' %}" class="ls-s3" style="max-width: 2000px !important; top: -50px; left: -550px; durationin: 0;" alt="Slide background">
                     
                     <!-- Text -->
                     <span class="ls-s-1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:50px; left: -70px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
@@ -92,7 +92,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             <div class="ls-layer" style="">
                 
                 <!-- Background -->
-                <img src="{% static 'img/Persepolis_ApadanaPalace_AZ.jpg' %}" class="ls-s3" style="max-width: 2000px !important; top: -50px; left: -550px; durationin: 0;" alt="Slide background">
+                <img src="{% static 'img/Persepolis_ApadanaPalace_AZ_small.jpg' %}" class="ls-s3" style="max-width: 2000px !important; top: -50px; left: -550px; durationin: 0;" alt="Slide background">
                     
                     <!-- Text -->
                     <span class="ls-s-1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:50px; left: -70px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
@@ -134,7 +134,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             <div class="ls-layer" style="">
                 
                 <!-- Background -->
-                <img src="{% static 'img/Tunisia_Dougga_Capitolium_NS.jpg' %}" class="ls-s3" style="max-width: 2000px !important; top: -50px; left: -550px; durationin: 0;" alt="Slide background">
+                <img src="{% static 'img/Tunisia_Dougga_Capitolium_NS_cropped.jpg' %}" class="ls-s3" style="max-width: 2000px !important; top: -50px; left: -550px; durationin: 0;" alt="Slide background">
                     
                     <!-- Text -->
                     <span class="ls-s-1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:50px; left: -70px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
@@ -155,7 +155,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             <div class="ls-layer" style="">
                 
                 <!-- Background -->
-                <img src="{% static 'img/Petra_AZ.jpg' %}" class="ls-s3" style="max-width: 2000px !important; top: -50px; left: -550px; durationin: 0;" alt="Slide background">
+                <img src="{% static 'img/Petra_AZ_cropped.jpg' %}" class="ls-s3" style="max-width: 2000px !important; top: -50px; left: -550px; durationin: 0;" alt="Slide background">
                     
                     <!-- Text -->
                     <span class="ls-s-1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:50px; left: -70px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">

@@ -3,6 +3,8 @@ import inspect
 from arches.settings import *
 from django.utils.translation import ugettext as _
 
+DEBUG = False
+
 PACKAGE_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 PACKAGE_NAME = PACKAGE_ROOT.split(os.sep)[-1]
 
@@ -45,9 +47,7 @@ REPORT_MIN_UNLOGGED_ZOOM = 16
 # in the lookup below will take on an identifier beginning with its truncated 
 # EntityType, e.g. ACTOR for ACTOR.E39, INFORMATION for INFORMATION_RESOURCE.E73
 EAMENA_RESOURCES = {
-    'HERITAGE_PLACE.E27': 'EAMENA',
-    'HERITAGE_FEATURE.E24': 'EAMENA-F',
-    'HERITAGE_COMPONENT.B2': 'EAMENA-C',
+    'HERITAGE_PLACE.E27': 'EAMENA'
 }
 
 ID_LENGTH = 7 #Indicates the length of the Unique Resource IDs after the set tag, e.g. 7 -> EAMENA-0000001. MUST BE GIVEN, AND BE 2 OR OVER.
@@ -57,6 +57,7 @@ ID_LENGTH = 7 #Indicates the length of the Unique Resource IDs after the set tag
 def RESOURCE_TYPE_CONFIGS():
     return {
         'HERITAGE_PLACE.E27': {
+            'allow_bulk_upload': True,
             'resourcetypeid': 'HERITAGE_PLACE.E27',
             'name': _('Heritage Place'),
             'icon_class': 'fa fa-stop',
@@ -75,45 +76,8 @@ def RESOURCE_TYPE_CONFIGS():
             },
             'sort_order': 1
         },
-        'HERITAGE_FEATURE.E24': {
-            'resourcetypeid': 'HERITAGE_FEATURE.E24',
-            'name': _('Heritage Feature'),
-            'icon_class': 'fa fa-th-large',
-            'default_page': 'assessment-summary',
-            'default_description': _('No name available'),
-            'description_node': _('NAME.E41'),
-            'categories': [_('Resource')],
-            'has_layer': True,
-            'on_map': True,
-            'marker_color': '#42b472',
-            'stroke_color': '#d9b562',
-            'fill_color': '#eedbad',
-            'primary_name_lookup': {
-                'entity_type': 'EAMENA_ID.E42',
-                'lookup_value': 'Primary'
-            },
-            'sort_order': 2
-        },
-        'HERITAGE_COMPONENT.B2': {
-            'resourcetypeid': 'HERITAGE_COMPONENT.B2',
-            'name': _('Heritage Component'),
-            'icon_class': 'fa fa-th',
-            'default_page': 'component-assessment',
-            'default_description': _('No name available'),
-            'description_node': _('NAME.E41'),
-            'categories': [_('Resource')],
-            'has_layer': True,
-            'on_map': True,
-            'marker_color': '#FFC53D',
-            'stroke_color': '#d9b562',
-            'fill_color': '#eedbad',
-            'primary_name_lookup': {
-                'entity_type': 'HERITAGE_COMPONENT_ID.E42',
-                'lookup_value': 'Primary'
-            },
-            'sort_order': 3
-        },
-        'ACTOR.E39': {
+
+            'ACTOR.E39': {
             'resourcetypeid': 'ACTOR.E39',
             'name': _('Person/Organization'),
             'icon_class': 'fa fa-group',
@@ -130,9 +94,10 @@ def RESOURCE_TYPE_CONFIGS():
                 'entity_type': 'EAMENA_ID.E42',
                 'lookup_value': 'Primary'
             },
-            'sort_order': 4
+            'sort_order': 2
         },
         'INFORMATION_RESOURCE.E73': {
+            'allow_bulk_upload': True,
             'resourcetypeid': 'INFORMATION_RESOURCE.E73',
             'name': _('Information Resource'),
             'icon_class': 'fa fa-file-text-o',
@@ -149,7 +114,7 @@ def RESOURCE_TYPE_CONFIGS():
                 'entity_type': 'EAMENA_ID.E42',
                 'lookup_value': 'Primary'
             },
-            'sort_order': 5
+            'sort_order': 3
         }
     }
 
@@ -258,16 +223,16 @@ ORDER_REPORT_SECTIONS_BY= {
 
 SEARCH_GROUP_ROOTS= [
     ('NAME.E41', _('Resource Names')),
-    ('SITE_FUNCTION_TYPE.E55', _('Site function')),
-    ('CULTURAL_PERIOD.E55', _('Cultural period')),
-    ('ASSESSMENT_TYPE.E55', _('Assessment')),
-    ('FEATURE_EVIDENCE_ASSIGNMENT.E17', _('Feature form')),
-    ('FEATURE_EVIDENCE_INTERPRETATION_ASSIGNMENT.E17', _('Feature interpretation')),
-    ('DISTURBANCE_STATE.E3', _('Disturbance assessment')),
-    ('THREAT_STATE.E3', _('Threat assessment')),
-    ('PROTECTION_EVENT.E65', _('Designation')),
-    ('MEASUREMENT_TYPE.E55', _('Measurements')),
-    ('PLACE_ADDRESS.E45', _('Addresses'))
+    ('SITE_FUNCTION_TYPE.I4', _('Site function')),
+    ('CULTURAL_PERIOD_TYPE.I4', _('Cultural period')),
+    ('ASSESSMENT_ACTIVITY_TYPE.E55', _('Assessment')),
+    ('FEATURE_ASSIGNMENT.E13', _('Feature form')),
+    ('FUNCTION_INTERPRETATION_INFERENCE_MAKING.I5', _('Feature interpretation')),
+    ('DAMAGE_STATE.E3', _('Disturbance assessment')),
+    ('THREAT_INFERENCE_MAKING.I5', _('Threat assessment')),
+    ('DESIGNATION_EVENT.E65', _('Designation')),
+    ('MEASUREMENTS.E16', _('Measurements')),
+    ('ADDRESS.E45', _('Addresses'))
 ]
 
 EXPORT_CONFIG = os.path.normpath(os.path.join(PACKAGE_ROOT, 'source_data', 'business_data', 'resource_export_mappings.json'))

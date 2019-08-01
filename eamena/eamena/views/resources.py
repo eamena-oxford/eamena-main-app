@@ -175,8 +175,6 @@ def report(request, resourceid):
     related_resource_dict = {
         'HERITAGE_RESOURCE': [],
         'HERITAGE_RESOURCE_GROUP': [],
-        'HERITAGE_FEATURE': [],
-        'HERITAGE_COMPONENT': [],
         'ACTIVITY': [],
         'ACTOR': [],
         'HISTORICAL_EVENT': [],
